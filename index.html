@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MATIAS - MAESTRO MAYOR DE OBRAS">
+  <title>MATIASMMO</title>
+  <!-- Fuente Google similar a la utilizada en el sitio -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset y estilos base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background: #fff;
+      line-height: 1.6;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    header .logo img {
+      width: 150px;
+      height: auto;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #007BFF;
+    }
+    .hero {
+      margin-top: 80px; /* espacio para el header */
+      height: 100vh;
+      background: url('https://casbro.cl/wp-content/uploads/2022/09/brush-stroke-banner-cian.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    form button {
+      padding: 10px;
+      border: none;
+      background: #007BFF;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #0056b3;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="\IMAGES\logo.png">
+        <img src="\IMAGES\logo.png" alt="LOGOMATIASMMO">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#que-hacemos">Qué hacemos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Sección Hero -->
+  <section id="inicio" class="hero">
+    <div>
+      <h1>Transformamos espacios en experiencias</h1>
+      <p>Diseño y construcción llave en mano</p>
+    </div>
+  </section>
+  
+  <!-- Sección Qué hacemos -->
+  <section id="que-hacemos" class="section">
+    <h2>Qué hacemos</h2>
+    <p>Nos apoyamos en un equipo de arquitectura y profesionales para crear espacios que inspiran y optimizan el rendimiento de tu empresa.</p>
+  </section>
+  
+  <!-- Sección Proyectos -->
+  <section id="proyectos" class="section">
+    <h2>Proyectos</h2>
+    <p>Con más de 160 proyectos desarrollados, transformamos ideas en espacios funcionales y estéticos, adaptándonos a las necesidades de cada cliente.</p>
+  </section>
+  
+  <!-- Sección Servicios -->
+  <section id="servicios" class="section">
+    <h2>Servicios</h2>
+    <p>Ofrecemos soluciones integrales en diseño, construcción y gestión de proyectos, con un enfoque innovador y personalizado.</p>
+  </section>
+  
+  <!-- Sección Contacto -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/xovevqno" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <textarea name="mensaje" placeholder="Describí tu proyecto..." rows="5" required></textarea>
+      <button type="submit">Enviar consulta</button>
+    </form>
+  </section>
+  
+  <footer>
+    <p>&copy; <span id="ano-actual"></span> MATIASMMO. Todos los derechos reservados.</p>
+  </footer>
+  
+  <script>
+    // Actualiza automáticamente el año en el footer
+    document.getElementById('ano-actual').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
